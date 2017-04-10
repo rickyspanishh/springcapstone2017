@@ -51,9 +51,10 @@ var settings = module.exports = {
     // Serve up the welcome page
     httpStatic: path.join(__dirname,"public"),
 
-    functionGlobalContext: { },
+    functionGlobalContext: { 
+        crc:require('crc')},
 
-    storageModule: require("./couchstorage")
+    storag eModule: require("./couchstorage")
 }
 
 if (process.env.NODE_RED_USERNAME && process.env.NODE_RED_PASSWORD) {
